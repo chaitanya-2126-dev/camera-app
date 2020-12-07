@@ -26,4 +26,16 @@ cameraTrigger.onclick = function() {
   cameraOutput.classList.add("taken");
 };
 // Start the video stream when the window loads
-window.addEventListener("load", cameraStart, false);
+window.addEventListener("load", cameraStart, false);var video=document.querySelector('#videoElement');
+navigator.getUserMedia=navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
+
+if(navigator.getUserMedia){
+  navigator.getUserMedia({video:true},handleVideo,videoError);
+}
+
+function handleVideo(stream){
+  video.src=window.URL.createObjectURL(stream);
+}
+function videoError(e){
+  
+}
