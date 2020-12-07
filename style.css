@@ -35,6 +35,22 @@ html, body{
     border: solid 3px white;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
     top: 20px;
-    right: 20px;
-    z-index: 2;
+    
+    *{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+#container{
+  margin: 0 auto;
+  width: 90%;
+  height:34vh;
+  border: 10px #333 solid;
+}
+#videoElement{
+  width: 90%;
+  height: 34vh;
+  background-color: #666;
+  margin: 0 auto;
 }
